@@ -10,13 +10,13 @@ public class RemoveDuplicate {
         }
     }
     int[] removeDuplicate(int[] arr){
-        int index=0;
-        for(int i=1;i<arr.length;i++){
-            if(arr[index]!=arr[i]){
-                arr[index++ +1]=arr[i];
+        int index =0;
+        for(int j=1;j<arr.length;j++){
+            if(arr[index]!=arr[j]){
+                arr[index++ +1]=arr[j];
             }
         }
-        int[] nodup=new int[index+1];
+        int[] nodup=new int[index +1];
         for (int i=0;i<nodup.length;i++){
             nodup[i]=arr[i];
         }
