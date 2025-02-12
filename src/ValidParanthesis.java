@@ -15,6 +15,8 @@ public class ValidParanthesis {
                     sc.pop();
                 else if(!sc.isEmpty() && c==']'&& sc.peek()=='[')
                     sc.pop();
+                else
+                    return false;
             }
         return sc.isEmpty();
         }
