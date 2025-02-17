@@ -18,7 +18,7 @@ public class FactorialNumber {
     }
     public int facRe(int num){
         if(num<=1)
-            return num;
+            return 1;
         return num*facRe(num-1);
     }
 }
