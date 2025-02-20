@@ -1,4 +1,4 @@
-public class RecursiveSumofDigits {
+public class RecursiveSumOfDigits {
     public static void main(String[] args) {
         System.out.println(recursiveSumOfDigit(1234));
     }
