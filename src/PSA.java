@@ -7,6 +7,7 @@ public class PSA {
         String paid=sc.nextLine();
         PSA p=new PSA();
         p.job(paid.trim().toLowerCase());
+        sc.close();
     }
     void job(String fees){
         if(fees.equals("yes")){

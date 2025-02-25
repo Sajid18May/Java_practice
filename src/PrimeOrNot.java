@@ -6,6 +6,7 @@ public class PrimeOrNot {
         Scanner sc=new Scanner(System.in);
         int num=sc.nextInt();
         System.out.println(PrimeOrNot.primeOrNot(num));
+        sc.close();
     }
     public static String primeOrNot(int n){
         if(n==1)

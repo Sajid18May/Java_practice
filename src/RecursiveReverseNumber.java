@@ -6,6 +6,7 @@ public class RecursiveReverseNumber {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         System.out.println(n+" after being reversed :"+revRe(n));
+        sc.close();
     }
 
     private static int revRe(int n) {//1234 ==> 4321 // 4*pow(10,noofdigit-1)

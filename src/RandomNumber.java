@@ -7,7 +7,7 @@ public class RandomNumber {
         Scanner sc=new Scanner(System.in);
         int max=sc.nextInt();
         int min=sc.nextInt();
-
+        sc.close();
         //with Random Class
         Random rn=new Random();
         int randomNumber= rn.nextInt(max-min+1)+min;

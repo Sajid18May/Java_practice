@@ -7,7 +7,8 @@ public class NeonNumber {
         System.out.println("Enter a number");
         int num=sc.nextInt();
         int square=num*num,sum=0;
-
+        sc.close();
+        
         while(square>0){
             int digit=square%10;
             sum+=digit;

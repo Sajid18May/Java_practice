@@ -17,6 +17,7 @@ public class KrishnamurthyNumber {
         else
             System.out.println("It's not KM number");
 
+            sc.close();
 
     }
     public static int fact(int fac){
