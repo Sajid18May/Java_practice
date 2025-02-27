@@ -1,55 +1,49 @@
 public class MergeSort {
     public static void main(String[] args) {
         int[] arr = { 23, 12, 32, 34, 56, 76, 38, 9, 18 };
-        mergeSort(arr);
+        mergeSort(arr,0,arr.length-1);
         for (int j : arr) System.out.print(j+" ");
     }
 
-    private static void mergeSort(int[] arr) {
+    private static void mergeSort(int[] arr,int low,int high) {
 
-        if(arr.length<=1)return;
+        if(low>=high)return;
 
-        int mid=arr.length/2;
-        int[] leftArray=new int[mid];
-        int[] rightArray=new int[arr.length-mid];
-        for (int i = 0,j=0; i < arr.length; i++) {
-            if(i<mid){
-                leftArray[i]=arr[i];
-            }
-            else{
-                rightArray[j]=arr[i];
-                j++;
-            }
-        }
-        mergeSort(leftArray);
-        mergeSort(rightArray);
-        merge(leftArray,rightArray,arr);
+        int mid=low+(high-low)/2;
+
+        mergeSort(arr,low,mid);
+        mergeSort(arr,mid+1,high);
+        merge(arr,low,mid,high);
     }
 
-    private static void merge(int[] leftArray, int[] rightArray, int[] arr) {
-        int l=0,r=0,i=0;
-        while (l<leftArray.length && r<rightArray.length){
-            if(leftArray[l]<rightArray[r]){
-                arr[i]=leftArray[l];
+    private static void merge(int[] arr,int low,int mid,int high) {
+        int l=low,r=mid+1,i=0;
+        int[] temp=new int[high-low+1];
+        while (l<=mid && r<=high){
+            if(arr[l]<arr[r]){
+                temp[i]=arr[l];
                 i++;
                 l++;
             }
             else {
-                arr[i]=rightArray[r];
+                temp[i]=arr[r];
                 i++;
                 r++;
             }
 
         }
-        while (l<leftArray.length) {
-            arr[i] = leftArray[l];
+        while (l<=mid) {
+            temp[i] = arr[l];
             i++;
             l++;
         }
-        while (r<rightArray.length) {
-            arr[i] = rightArray[r];
+        while (r<=high) {
+            temp[i] = arr[r];
             i++;
             r++;
+        }
+        for (int index=0;index< temp.length;index++){
+            arr[low+index]=temp[index];
         }
     }
 }
