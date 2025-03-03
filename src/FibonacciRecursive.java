@@ -8,13 +8,15 @@ public class FibonacciRecursive {
             return;
         }
         fibonacciRecursive(n-1);
-        System.out.println(fibonacciRecursiveHelper(n));
+        System.out.print(fibonacciRecursiveHelper(n)+" ");
     }
 
     private static int fibonacciRecursiveHelper(int n) {
-        if(n<=1){
+        if(n<=1)
             return n;
-        }
+
         return fibonacciRecursiveHelper(n-1)+fibonacciRecursiveHelper(n-2);
     }
+
+
 }
