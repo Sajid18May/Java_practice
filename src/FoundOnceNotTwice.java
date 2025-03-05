@@ -8,10 +8,40 @@ public class FoundOnceNotTwice {
     }
 
     private static int onceNotTwice(int[] arr) {
-        int xor = 0;
-        for (int i = 0; i < arr.length; i++) {
-            xor = xor ^ arr[i];
+        ArrayList<Integer> ls=new ArrayList<>();
+        for(int i:arr){
+            if(ls.isEmpty()){
+                ls.add(i);
+            } else if (ls.get(ls.size()-1)!=i) {
+                ls.add(i);
+            }
+            else {
+                ls.remove(ls.size()-1);
+            }
         }
-        return xor;
+     return ls.get(ls.size()-1);
+    }
+
+    private static int onceNotTwiceBrute(int[] arr) {
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        int[] hash = new int[max + 1];
+        for (int i : arr) {
+            for (int j : arr) {
+                if (i == j) {
+                    hash[i] += 1;
+                }
+            }
+        }
+
+        for (int i = 0; i < hash.length; i++) {
+            if (hash[i] == 1)
+                return i;
+        }
+        return max;
     }
 }
