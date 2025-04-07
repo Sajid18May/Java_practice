@@ -6,7 +6,7 @@ public class ExceptionD {
         e.test1();
         System.out.println(1);
     }
-    void test1() throws Exception{
+    void test1() throws Exception {
         ExceptionD e=new ExceptionD();
         e.test2();
         System.out.println(2);
@@ -16,7 +16,7 @@ public class ExceptionD {
         e.test3();
         System.out.println(3);
     }
-    void test3() throws Exception{
+    void test3() throws Exception {
         FileReader fr=new FileReader("D:\\logo\\text.txt");
         fr.close();
         System.out.println(4);
