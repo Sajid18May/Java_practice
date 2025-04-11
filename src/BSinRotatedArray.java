@@ -5,32 +5,28 @@ public class BSinRotatedArray {
         System.out.println(search(arr,target));
     }
 
-    public static int search(int[] nums, int target) {
-        int low = 0, high = nums.length - 1;
+    public static int search(int[] arr, int target) {
+        int low = 0, high = arr.length - 1;
         int index = -1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (nums[mid] > nums[high]) {
-                if (nums[mid] == target) {
-                    index = mid;
-                    break;
-                } else if (nums[mid] < target) {
-                    low = mid + 1;
-                } else {
-                    high = mid - 1;
+            if (arr[mid] == target) {
+                return mid;
+            }
+            if (arr[mid] <= arr[high]) {
+                if(arr[mid]<= target && arr[high]>=target){
+                    low=mid+1;
                 }
-
-            } else {
-                if (nums[mid] == target) {
-                    index = mid;
-                    break;
-                } else if (nums[mid] < target) {
-                    low = mid + 1;
-                } else {
+                else {
+                    high=mid-1;
+                }
+            }else {
+                if (arr[low] <= target && arr[mid] >= target) {
                     high = mid - 1;
+                } else {
+                    low = mid + 1;
                 }
             }
-
         }
         return index;
     }
