@@ -8,12 +8,12 @@ public class RandomNumber {
         int max=sc.nextInt();
         int min=sc.nextInt();
         sc.close();
-        //with Random Class
+        //with RandomX Class
         Random rn=new Random();
         int randomNumber= rn.nextInt(max-min+1)+min;
-        System.out.println("Random number :"+randomNumber);
+        System.out.println("RandomX number :"+randomNumber);
 
         //with Math.random() method
-        System.out.println("Random number :"+(Math.floor(Math.random()*(max-min+1))+min));
+        System.out.println("RandomX number :"+(Math.floor(Math.random()*(max-min+1))+min));
     }
 }
