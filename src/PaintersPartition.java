@@ -14,7 +14,6 @@ public class PaintersPartition {
                 numOfBoard++;
                 totalLength=i;
             }
-
             else{
                 totalLength+=i;
             }
