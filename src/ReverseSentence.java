@@ -7,10 +7,10 @@ public class ReverseSentence {
     public static String reverseWords(String s) {
         String[] str = s.trim().split("\\s+");
 
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
 
         for (int i = str.length - 1; i > 0; i--) {
-            out.append(str[i] + " ");
+            out.append(str[i]).append(" ");
         }
         out.append(str[0]);
         return out.toString();
