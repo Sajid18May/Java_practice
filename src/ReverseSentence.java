@@ -1,4 +1,4 @@
-public class ReverseSentence {
+class ReverseSentence {
     public static void main(String[] args) {
         String s="I love you";
         System.out.println(reverseWords(s));
