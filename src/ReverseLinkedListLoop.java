@@ -22,4 +22,17 @@
         }
         return previous;
     }
+       public ListNode reverseListRe(ListNode head){
+        if(head==null || head.next==null) return head;
+
+        ListNode nextNode=reverseListRe(head.next);
+
+           ListNode front=head.next;
+
+           front.next=head;
+
+           head.next=null;
+
+        return nextNode;
+       }
 }
