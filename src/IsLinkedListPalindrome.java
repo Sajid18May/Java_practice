@@ -39,12 +39,10 @@ public static Node reverseLinkedList(Node head) {
     // Store the next node in 'front'
     // to reverse the link
     Node front = head.next;
-
     // Update the 'next' pointer of 'front' to
     // point to the current head, effectively
     // reversing the link direction
     front.next = head;
-
     // Set the 'next' pointer of the
     // current head to 'null' to
     // break the original link
