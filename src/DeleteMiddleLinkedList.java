@@ -8,8 +8,7 @@ public class DeleteMiddleLinkedList {
 
             // Initialize slow and fast pointers
             Node slow = head;
-            Node fast = head;
-            fast = head.next.next;
+            Node fast = head.next.next;
 
             // Move 'fast' pointer twice as fast as 'slow'
             while (fast != null && fast.next != null) {
