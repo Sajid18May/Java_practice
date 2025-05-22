@@ -1,4 +1,4 @@
-public class DeleteMiddleofLinkedList {
+public class DeleteMiddleLinkedList {
         static Node deleteMiddle(Node head) {
         /* If the list is empty or has only one node,
            return null as there is no middle node to delete */
