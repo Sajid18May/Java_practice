@@ -13,7 +13,7 @@ public class LargestPrefix {
             boolean match=true;
             char current =arr[0].charAt(i);
             for (int j = 1; j < arr.length-1; j++) {
-                if(current != arr[j].charAt(i)){
+                if(i > arr[arr.length-1].length() || current != arr[j].charAt(i)){
                     match=false;
                     break;
                 }
