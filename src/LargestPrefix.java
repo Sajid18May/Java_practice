@@ -10,14 +10,18 @@ public class LargestPrefix {
         if(arr.length==0 || arr[0].length()<=1)
             return prefix.toString();
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i; j < arr[arr.length-1].length(); j++) {
-                if(arr[i].charAt(j)==arr[i].charAt(j+1)){
-                    prefix.append(arr[i].charAt(j));
-                }
-                else
+            boolean match=true;
+            char current =arr[0].charAt(i);
+            for (int j = 1; j < arr.length-1; j++) {
+                if(current != arr[j].charAt(i)){
+                    match=false;
                     break;
-
+                }
             }
+            if(match)
+                prefix.append(arr[i].charAt(i));
+            else
+                break;
         }
         return prefix.toString();
     }
