@@ -3,6 +3,7 @@ public class OccurrenceOfCharacter {
         String value = "lieutenant";
         char c = 't';
         System.out.println("Occurrence of '"+c+"' in "+value+" is "+occurrenceOfChar(value,c));
+        System.out.println("Occurrence of '"+c+"' in "+value+" is "+occurrenceOfCharStream(value,c));
     }
 
     private static int occurrenceOfChar(String value, char c) {
@@ -12,6 +13,12 @@ public class OccurrenceOfCharacter {
                 count++;
         }
         return count;
+    }
+    private static int occurrenceOfCharStream(String value, char c) {
+
+        return (int)value.chars()
+                .filter(ch -> ch == c)
+                .count();
     }
 
 }
