@@ -14,6 +14,7 @@ public class OccurrenceOfCharacter {
         }
         return count;
     }
+
     private static int occurrenceOfCharStream(String value, char c) {
 
         return (int)value.chars()
